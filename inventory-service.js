@@ -5,6 +5,9 @@ const app = express();
 const PORT = 3000;
 //hello guys how are youuuu
 //hyhyhy
+//hello mannn
+//how are youuu
+//i hope you're fine
 let inventory = {
   'item1': { name: 'Item 1', quantity: 10 },
   'item2': { name: 'Item 2', quantity: 5 }
