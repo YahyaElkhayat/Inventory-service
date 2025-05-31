@@ -7,7 +7,9 @@ const PORT = 3000;
 //hyhyhy
 const yhy= jsuahiu
 const stage= remuneration
-//hello mannn
+const yhy2= jsuahiu
+const stage3= remunerationconst
+const stage4= remuneration//hello mannn
 //how are youuu
 //i hope you're fine
 //hyrrr
