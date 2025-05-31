@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "YahyaElkhayat/Inventory-service",
+  "pipelineDirectory": "Inventory-service",
+  "workspaceDirectory": "Inventory-service\\Inventory-service",
+  "repositories": {
+    "YahyaElkhayat/Inventory-service": {
+      "repositoryPath": "Inventory-service\\Inventory-service",
+      "lastRunOn": "05/31/2025 23:16:50 +01:00"
+    }
+  },
+  "lastRunOn": "05/31/2025 23:16:50 +01:00"
+}

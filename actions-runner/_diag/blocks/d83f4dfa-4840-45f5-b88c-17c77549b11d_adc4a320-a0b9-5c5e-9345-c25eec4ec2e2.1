@@ -1,0 +1,52 @@
+﻿2025-05-31T22:16:50.1570887Z Current runner version: '2.324.0'
+2025-05-31T22:16:50.1589072Z Runner name: 'DESKTOP-7FSQ2A0'
+2025-05-31T22:16:50.1590981Z Machine name: 'DESKTOP-7FSQ2A0'
+2025-05-31T22:16:50.1601878Z ##[group]GITHUB_TOKEN Permissions
+2025-05-31T22:16:50.1609745Z Contents: read
+2025-05-31T22:16:50.1611283Z Metadata: read
+2025-05-31T22:16:50.1612315Z Packages: read
+2025-05-31T22:16:50.1613316Z ##[endgroup]
+2025-05-31T22:16:50.1618006Z Secret source: Actions
+2025-05-31T22:16:50.1619464Z Prepare workflow directory
+2025-05-31T22:16:50.2270639Z Prepare all required actions
+2025-05-31T22:16:50.2324860Z Getting action download info
+2025-05-31T22:16:51.1401754Z Download action repository 'actions/checkout@v4' (SHA:11bd71901bbe5b1630ceea73d27597364c9af683)
+2025-05-31T22:16:52.8118107Z Complete job name: deploy
+2025-05-31T22:16:53.1238388Z ##[group]Run actions/checkout@v4
+2025-05-31T22:16:53.1246024Z with:
+2025-05-31T22:16:53.1247790Z   repository: YahyaElkhayat/Inventory-service
+2025-05-31T22:16:53.1250761Z   token: ***
+2025-05-31T22:16:53.1252059Z   ssh-strict: true
+2025-05-31T22:16:53.1253986Z   ssh-user: git
+2025-05-31T22:16:53.1255657Z   persist-credentials: true
+2025-05-31T22:16:53.1257286Z   clean: true
+2025-05-31T22:16:53.1258387Z   sparse-checkout-cone-mode: true
+2025-05-31T22:16:53.1259647Z   fetch-depth: 1
+2025-05-31T22:16:53.1260952Z   fetch-tags: false
+2025-05-31T22:16:53.1262550Z   show-progress: true
+2025-05-31T22:16:53.1264269Z   lfs: false
+2025-05-31T22:16:53.1265842Z   submodules: false
+2025-05-31T22:16:53.1266965Z   set-safe-directory: true
+2025-05-31T22:16:53.1270228Z ##[endgroup]
+2025-05-31T22:16:55.0804201Z Syncing repository: YahyaElkhayat/Inventory-service
+2025-05-31T22:16:55.0808928Z ##[group]Getting Git version info
+2025-05-31T22:16:55.0810823Z Working directory is 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\Inventory-service\Inventory-service'
+2025-05-31T22:16:55.1871070Z [command]"C:\Program Files\Git\cmd\git.exe" version
+2025-05-31T22:16:55.2972981Z git version 2.47.1.windows.2
+2025-05-31T22:16:55.3089986Z ##[endgroup]
+2025-05-31T22:16:55.3120546Z Copying 'C:\Users\yahya\.gitconfig' to 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp\e0f0d117-78ce-40ac-8bed-2179e527a26c\.gitconfig'
+2025-05-31T22:16:55.3186594Z Temporarily overriding HOME='C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp\e0f0d117-78ce-40ac-8bed-2179e527a26c' before making global git config changes
+2025-05-31T22:16:55.3189472Z Adding repository directory to the temporary git global config as a safe directory
+2025-05-31T22:16:55.3219019Z [command]"C:\Program Files\Git\cmd\git.exe" config --global --add safe.directory C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\Inventory-service\Inventory-service
+2025-05-31T22:16:55.5874062Z Deleting the contents of 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\Inventory-service\Inventory-service'
+2025-05-31T22:16:55.5899319Z ##[group]Initializing the repository
+2025-05-31T22:16:55.5926202Z [command]"C:\Program Files\Git\cmd\git.exe" init C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\Inventory-service\Inventory-service
+2025-05-31T22:16:55.8572595Z Initialized empty Git repository in C:/Users/yahya/Downloads/inventory-service/actions-runner/_work/Inventory-service/Inventory-service/.git/
+2025-05-31T22:16:55.8693149Z [command]"C:\Program Files\Git\cmd\git.exe" remote add origin https://github.com/YahyaElkhayat/Inventory-service
+2025-05-31T22:16:56.0404510Z ##[endgroup]
+2025-05-31T22:16:56.0405357Z ##[group]Disabling automatic garbage collection
+2025-05-31T22:16:56.0406117Z [command]"C:\Program Files\Git\cmd\git.exe" config --local gc.auto 0
+2025-05-31T22:16:56.1948526Z ##[endgroup]
+2025-05-31T22:16:56.1974824Z ##[group]Setting up auth
+2025-05-31T22:16:56.1976504Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2025-05-31T22:16:56.3617445Z [command]"C:\Program Files\Git\cmd
