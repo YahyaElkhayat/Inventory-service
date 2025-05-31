@@ -1,0 +1,3663 @@
+[2025-05-31 22:38:50Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2025-05-31 22:38:50Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:50Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:50Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known config file 'Runner': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\.runner'
+[2025-05-31 22:38:51Z INFO Worker] Version: 2.324.0
+[2025-05-31 22:38:51Z INFO Worker] Commit: da3412efd49b1cf1a0fbdcbcee4e4ac4cc2177c8
+[2025-05-31 22:38:51Z INFO Worker] Culture: en-US
+[2025-05-31 22:38:51Z INFO Worker] UI Culture: en-US
+[2025-05-31 22:38:51Z INFO Worker] Waiting to receive the job message from the channel.
+[2025-05-31 22:38:51Z INFO ProcessChannel] Receiving message of length 34646, with hash 'bbb1f8b77f640d3d75108fcbcefeca96e8e6d0fa8ab2a7b21d6492b83844f24c'
+[2025-05-31 22:38:51Z INFO Worker] Message received.
+[2025-05-31 22:38:51Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/inventory-service-cd.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v4",
+        "repositoryType": "GitHub"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 15,
+        "col": 15,
+        "lit": "Checkout Repository (Optional)"
+      },
+      "contextName": "__actions_checkout",
+      "condition": "success()",
+      "id": "319f94e9-99b6-4a7b-985c-8419bf1194ff",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 18,
+        "col": 15,
+        "lit": "Pull Docker Image from Docker Hub"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 19,
+              "col": 14,
+              "lit": "docker pull frhassan/imagesrepository:latest"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "764e13d0-f267-41f9-a84a-0985fa16ead0",
+      "name": "__run"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 21,
+        "col": 15,
+        "lit": "Stop and Remove Existing Docker Container (Windows PowerShell)"
+      },
+      "contextName": "__run_2",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 23,
+              "col": 14,
+              "lit": "$container = docker ps -q -f \"name=myapp\"\nif ($container) {\n  docker stop myapp\n  docker rm myapp\n}\nelse {\n  Write-Host \"No existing container named 'myapp' found.\"\n}\n"
+            }
+          },
+          {
+            "key": "shell",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 22,
+              "col": 16,
+              "lit": "powershell"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "d44cb854-d49a-4fc7-9057-2952a55192c1",
+      "name": "__run_2"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 33,
+        "col": 15,
+        "lit": "Run Docker Container"
+      },
+      "contextName": "__run_3",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 34,
+              "col": 14,
+              "lit": "docker run -d --name myapp -p 3000:3000 frhassan/imagesrepository:latest"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "a0743997-cc0f-4b58-942d-992f1ba611ac",
+      "name": "__run_3"
+    }
+  ],
+  "variables": {
+    "Actions.EnableHttpRedirects": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode16Action": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "DistributedTask.DetailUntarFailure": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnableJobServerQueueTelemetry": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode16": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode20": {
+      "value": "true"
+    },
+    "DistributedTask.LogTemplateErrorsAsDebugMessages": {
+      "value": "true"
+    },
+    "DistributedTask.MarkJobAsFailedOnWorkerCrash": {
+      "value": "true"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.UseActionArchiveCache": {
+      "value": "true"
+    },
+    "DistributedTask.UseWhich2": {
+      "value": "true"
+    },
+    "RunService.FixEmbeddedIssues": {
+      "value": "true"
+    },
+    "actions_add_check_run_id_to_job_context": {
+      "value": "false"
+    },
+    "actions_display_helpful_actions_download_errors": {
+      "value": "false"
+    },
+    "actions_skip_retry_complete_job_upon_known_errors": {
+      "value": "true"
+    },
+    "actions_uses_cache_service_v2": {
+      "value": "true"
+    },
+    "github_token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.from_run_service": {
+      "value": "true"
+    },
+    "system.github.job": {
+      "value": "deploy"
+    },
+    "system.github.launch_endpoint": {
+      "value": "https://launch.actions.githubusercontent.com"
+    },
+    "system.github.results_endpoint": {
+      "value": "https://results-receiver.actions.githubusercontent.com/"
+    },
+    "system.github.results_upload_with_sdk": {
+      "value": "true"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Contents\":\"read\",\"Metadata\":\"read\",\"Packages\":\"read\"}"
+    },
+    "system.orchestrationId": {
+      "value": "ed8c9a45-cd93-41eb-b63f-639285254de5.deploy.__default"
+    },
+    "system.phaseDisplayName": {
+      "value": "deploy"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "system.runnerEnvironment": {
+      "value": "self-hosted"
+    }
+  },
+  "messageType": "RunnerJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "actions",
+    "version": 0,
+    "planId": "ed8c9a45-cd93-41eb-b63f-639285254de5",
+    "planGroup": null,
+    "artifactUri": null,
+    "artifactLocation": null,
+    "definition": null,
+    "owner": null
+  },
+  "timeline": {
+    "id": "ed8c9a45-cd93-41eb-b63f-639285254de5",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "4d141929-d91b-54be-b381-8ff4f59ae0d9",
+  "jobDisplayName": "deploy",
+  "jobName": "__default",
+  "requestId": 0,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "",
+          "ServerName": "",
+          "CacheServerUrl": "https://acghubeus1.actions.githubusercontent.com/FntyNZhlPzuAfubsrdf77g0QO1UaJDdYgo0EJnuSpyZdD5cVvH/",
+          "FeedStreamUrl": "wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock",
+          "ResultsServiceUrl": "https://results-receiver.actions.githubusercontent.com/",
+          "PipelinesServiceUrl": "https://pipelinesghubeus3.actions.githubusercontent.com/FntyNZhlPzuAfubsrdf77g0QO1UaJDdYgo0EJnuSpyZdD5cVvH/",
+          "GenerateIdTokenUrl": ""
+        },
+        "name": "SystemVssConnection",
+        "url": "https://run-actions-2-azure-eastus.actions.githubusercontent.com/91/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": "***"
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/main"
+        },
+        {
+          "k": "sha",
+          "v": "4560762c3dad390cbd616a5d4ebde21ebdb68e6f"
+        },
+        {
+          "k": "repository",
+          "v": "YahyaElkhayat/Inventory-service"
+        },
+        {
+          "k": "repository_owner",
+          "v": "YahyaElkhayat"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "149570106"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/YahyaElkhayat/Inventory-service.git"
+        },
+        {
+          "k": "run_id",
+          "v": "15367610793"
+        },
+        {
+          "k": "run_number",
+          "v": "10"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "public"
+        },
+        {
+          "k": "actor_id",
+          "v": "149570106"
+        },
+        {
+          "k": "actor",
+          "v": "YahyaElkhayat"
+        },
+        {
+          "k": "workflow",
+          "v": "Deploy Docker Image from Docker Hub (Self-Hosted Runner)"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "workflow_run"
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "main"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "action",
+                "v": "completed"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/YahyaElkhayat/Inventory-service.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": "2025-03-17T11:39:32Z"
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "YahyaElkhayat/Inventory-service"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/YahyaElkhayat/Inventory-service.git"
+                    },
+                    {
+                      "k": "has_discussions",
+                      "v": false
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/YahyaElkhayat/Inventory-service"
+                    },
+                    {
+                      "k": "id",
+                      "v": 949942865.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "JavaScript"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "Inventory-service"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOOJ76UQ"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/149570106?v=4"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/YahyaElkhayat"
+                          },
+                          {
+                            "k": "id",
+                            "v": 149570106.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "YahyaElkhayat"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "U_kgDOCOpCOg"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/YahyaElkhayat"
+                          },
+                          {
+                            "k": "user_view_type",
+                            "v": "public"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": "2025-05-31T21:15:19Z"
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 805.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:YahyaElkhayat/Inventory-service.git"
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/YahyaElkhayat/Inventory-service"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2025-05-31T21:15:23Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/149570106?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/YahyaElkhayat/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/YahyaElkhayat/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/YahyaElkhayat/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/YahyaElkhayat/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/YahyaElkhayat"
+                    },
+                    {
+                      "k": "id",
+                      "v": 149570106.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "YahyaElkhayat"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "U_kgDOCOpCOg"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/YahyaElkhayat/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/YahyaElkhayat/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/YahyaElkhayat/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/YahyaElkhayat/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/YahyaElkhayat/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/YahyaElkhayat"
+                    },
+                    {
+                      "k": "user_view_type",
+                      "v": "public"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "workflow",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "badge_url",
+                      "v": "https://github.com/YahyaElkhayat/Inventory-service/workflows/Node.js%20CI%20with%20Docker%20Build%20and%20Publish/badge.svg"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": "2025-05-31T21:00:04.000Z"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/YahyaElkhayat/Inventory-service/blob/main/.github/workflows/node.js.yml"
+                    },
+                    {
+                      "k": "id",
+                      "v": 165490670.0
+                    },
+                    {
+                      "k": "name",
+                      "v": "Node.js CI with Docker Build and Publish"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "W_kwDOOJ76Uc4J3S_u"
+                    },
+                    {
+                      "k": "path",
+                      "v": ".github/workflows/node.js.yml"
+                    },
+                    {
+                      "k": "state",
+                      "v": "active"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2025-05-31T21:07:00.000Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/actions/workflows/165490670"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "workflow_run",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "actor",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/149570106?v=4"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/YahyaElkhayat"
+                          },
+                          {
+                            "k": "id",
+                            "v": 149570106.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "YahyaElkhayat"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "U_kgDOCOpCOg"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/YahyaElkhayat"
+                          },
+                          {
+                            "k": "user_view_type",
+                            "v": "public"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "artifacts_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/actions/runs/15367604820/artifacts"
+                    },
+                    {
+                      "k": "cancel_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/actions/runs/15367604820/cancel"
+                    },
+                    {
+                      "k": "check_suite_id",
+                      "v": 39419313372.0
+                    },
+                    {
+                      "k": "check_suite_node_id",
+                      "v": "CS_kwDOOJ76Uc8AAAAJLZL83A"
+                    },
+                    {
+                      "k": "check_suite_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/check-suites/39419313372"
+                    },
+                    {
+                      "k": "conclusion",
+                      "v": "success"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": "2025-05-31T21:15:21Z"
+                    },
+                    {
+                      "k": "display_title",
+                      "v": "Merge branch 'main' of https://github.com/YahyaElkhayat/Inventory-ser…"
+                    },
+                    {
+                      "k": "event",
+                      "v": "push"
+                    },
+                    {
+                      "k": "head_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "head_commit",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "author",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "email",
+                                  "v": "yahyaelkhayat6@gmail.com"
+                                },
+                                {
+                                  "k": "name",
+                                  "v": "Yahya elkhayat"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "committer",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "email",
+                                  "v": "yahyaelkhayat6@gmail.com"
+                                },
+                                {
+                                  "k": "name",
+                                  "v": "Yahya elkhayat"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "id",
+                            "v": "4560762c3dad390cbd616a5d4ebde21ebdb68e6f"
+                          },
+                          {
+                            "k": "message",
+                            "v": "Merge branch 'main' of https://github.com/YahyaElkhayat/Inventory-service"
+                          },
+                          {
+                            "k": "timestamp",
+                            "v": "2025-05-31T21:15:08Z"
+                          },
+                          {
+                            "k": "tree_id",
+                            "v": "5ba4dfa09df9fb87ddb1bb5f192bc325c9a8e964"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "head_repository",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "archive_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/{archive_format}{/ref}"
+                          },
+                          {
+                            "k": "assignees_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/assignees{/user}"
+                          },
+                          {
+                            "k": "blobs_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/git/blobs{/sha}"
+                          },
+                          {
+                            "k": "branches_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/branches{/branch}"
+                          },
+                          {
+                            "k": "collaborators_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/collaborators{/collaborator}"
+                          },
+                          {
+                            "k": "comments_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/comments{/number}"
+                          },
+                          {
+                            "k": "commits_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/commits{/sha}"
+                          },
+                          {
+                            "k": "compare_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/compare/{base}...{head}"
+                          },
+                          {
+                            "k": "contents_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/contents/{+path}"
+                          },
+                          {
+                            "k": "contributors_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/contributors"
+                          },
+                          {
+                            "k": "deployments_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/deployments"
+                          },
+                          {
+                            "k": "description",
+                            "v": null
+                          },
+                          {
+                            "k": "downloads_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/downloads"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/events"
+                          },
+                          {
+                            "k": "fork",
+                            "v": false
+                          },
+                          {
+                            "k": "forks_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/forks"
+                          },
+                          {
+                            "k": "full_name",
+                            "v": "YahyaElkhayat/Inventory-service"
+                          },
+                          {
+                            "k": "git_commits_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/git/commits{/sha}"
+                          },
+                          {
+                            "k": "git_refs_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/git/refs{/sha}"
+                          },
+                          {
+                            "k": "git_tags_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/git/tags{/sha}"
+                          },
+                          {
+                            "k": "hooks_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/hooks"
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/YahyaElkhayat/Inventory-service"
+                          },
+                          {
+                            "k": "id",
+                            "v": 949942865.0
+                          },
+                          {
+                            "k": "issue_comment_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/issues/comments{/number}"
+                          },
+                          {
+                            "k": "issue_events_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/issues/events{/number}"
+                          },
+                          {
+                            "k": "issues_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/issues{/number}"
+                          },
+                          {
+                            "k": "keys_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/keys{/key_id}"
+                          },
+                          {
+                            "k": "labels_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/labels{/name}"
+                          },
+                          {
+                            "k": "languages_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/languages"
+                          },
+                          {
+                            "k": "merges_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/merges"
+                          },
+                          {
+                            "k": "milestones_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/milestones{/number}"
+                          },
+                          {
+                            "k": "name",
+                            "v": "Inventory-service"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "R_kgDOOJ76UQ"
+                          },
+                          {
+                            "k": "notifications_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/notifications{?since,all,participating}"
+                          },
+                          {
+                            "k": "owner",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "avatar_url",
+                                  "v": "https://avatars.githubusercontent.com/u/149570106?v=4"
+                                },
+                                {
+                                  "k": "events_url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat/events{/privacy}"
+                                },
+                                {
+                                  "k": "followers_url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat/followers"
+                                },
+                                {
+                                  "k": "following_url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat/following{/other_user}"
+                                },
+                                {
+                                  "k": "gists_url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat/gists{/gist_id}"
+                                },
+                                {
+                                  "k": "gravatar_id",
+                                  "v": ""
+                                },
+                                {
+                                  "k": "html_url",
+                                  "v": "https://github.com/YahyaElkhayat"
+                                },
+                                {
+                                  "k": "id",
+                                  "v": 149570106.0
+                                },
+                                {
+                                  "k": "login",
+                                  "v": "YahyaElkhayat"
+                                },
+                                {
+                                  "k": "node_id",
+                                  "v": "U_kgDOCOpCOg"
+                                },
+                                {
+                                  "k": "organizations_url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat/orgs"
+                                },
+                                {
+                                  "k": "received_events_url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat/received_events"
+                                },
+                                {
+                                  "k": "repos_url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat/repos"
+                                },
+                                {
+                                  "k": "site_admin",
+                                  "v": false
+                                },
+                                {
+                                  "k": "starred_url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat/starred{/owner}{/repo}"
+                                },
+                                {
+                                  "k": "subscriptions_url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat/subscriptions"
+                                },
+                                {
+                                  "k": "type",
+                                  "v": "User"
+                                },
+                                {
+                                  "k": "url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat"
+                                },
+                                {
+                                  "k": "user_view_type",
+                                  "v": "public"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "private",
+                            "v": false
+                          },
+                          {
+                            "k": "pulls_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/pulls{/number}"
+                          },
+                          {
+                            "k": "releases_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/releases{/id}"
+                          },
+                          {
+                            "k": "stargazers_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/stargazers"
+                          },
+                          {
+                            "k": "statuses_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/statuses/{sha}"
+                          },
+                          {
+                            "k": "subscribers_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/subscribers"
+                          },
+                          {
+                            "k": "subscription_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/subscription"
+                          },
+                          {
+                            "k": "tags_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/tags"
+                          },
+                          {
+                            "k": "teams_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/teams"
+                          },
+                          {
+                            "k": "trees_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/git/trees{/sha}"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "head_sha",
+                      "v": "4560762c3dad390cbd616a5d4ebde21ebdb68e6f"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/YahyaElkhayat/Inventory-service/actions/runs/15367604820"
+                    },
+                    {
+                      "k": "id",
+                      "v": 15367604820.0
+                    },
+                    {
+                      "k": "jobs_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/actions/runs/15367604820/jobs"
+                    },
+                    {
+                      "k": "logs_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/actions/runs/15367604820/logs"
+                    },
+                    {
+                      "k": "name",
+                      "v": "Node.js CI with Docker Build and Publish"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "WFR_kwLOOJ76Uc8AAAADk_sKVA"
+                    },
+                    {
+                      "k": "path",
+                      "v": ".github/workflows/node.js.yml"
+                    },
+                    {
+                      "k": "previous_attempt_url",
+                      "v": null
+                    },
+                    {
+                      "k": "pull_requests",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "referenced_workflows",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "repository",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "archive_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/{archive_format}{/ref}"
+                          },
+                          {
+                            "k": "assignees_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/assignees{/user}"
+                          },
+                          {
+                            "k": "blobs_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/git/blobs{/sha}"
+                          },
+                          {
+                            "k": "branches_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/branches{/branch}"
+                          },
+                          {
+                            "k": "collaborators_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/collaborators{/collaborator}"
+                          },
+                          {
+                            "k": "comments_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/comments{/number}"
+                          },
+                          {
+                            "k": "commits_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/commits{/sha}"
+                          },
+                          {
+                            "k": "compare_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/compare/{base}...{head}"
+                          },
+                          {
+                            "k": "contents_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/contents/{+path}"
+                          },
+                          {
+                            "k": "contributors_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/contributors"
+                          },
+                          {
+                            "k": "deployments_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/deployments"
+                          },
+                          {
+                            "k": "description",
+                            "v": null
+                          },
+                          {
+                            "k": "downloads_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/downloads"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/events"
+                          },
+                          {
+                            "k": "fork",
+                            "v": false
+                          },
+                          {
+                            "k": "forks_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/forks"
+                          },
+                          {
+                            "k": "full_name",
+                            "v": "YahyaElkhayat/Inventory-service"
+                          },
+                          {
+                            "k": "git_commits_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/git/commits{/sha}"
+                          },
+                          {
+                            "k": "git_refs_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/git/refs{/sha}"
+                          },
+                          {
+                            "k": "git_tags_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/git/tags{/sha}"
+                          },
+                          {
+                            "k": "hooks_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/hooks"
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/YahyaElkhayat/Inventory-service"
+                          },
+                          {
+                            "k": "id",
+                            "v": 949942865.0
+                          },
+                          {
+                            "k": "issue_comment_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/issues/comments{/number}"
+                          },
+                          {
+                            "k": "issue_events_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/issues/events{/number}"
+                          },
+                          {
+                            "k": "issues_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/issues{/number}"
+                          },
+                          {
+                            "k": "keys_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/keys{/key_id}"
+                          },
+                          {
+                            "k": "labels_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/labels{/name}"
+                          },
+                          {
+                            "k": "languages_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/languages"
+                          },
+                          {
+                            "k": "merges_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/merges"
+                          },
+                          {
+                            "k": "milestones_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/milestones{/number}"
+                          },
+                          {
+                            "k": "name",
+                            "v": "Inventory-service"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "R_kgDOOJ76UQ"
+                          },
+                          {
+                            "k": "notifications_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/notifications{?since,all,participating}"
+                          },
+                          {
+                            "k": "owner",
+                            "v": {
+                              "t": 2,
+                              "d": [
+                                {
+                                  "k": "avatar_url",
+                                  "v": "https://avatars.githubusercontent.com/u/149570106?v=4"
+                                },
+                                {
+                                  "k": "events_url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat/events{/privacy}"
+                                },
+                                {
+                                  "k": "followers_url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat/followers"
+                                },
+                                {
+                                  "k": "following_url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat/following{/other_user}"
+                                },
+                                {
+                                  "k": "gists_url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat/gists{/gist_id}"
+                                },
+                                {
+                                  "k": "gravatar_id",
+                                  "v": ""
+                                },
+                                {
+                                  "k": "html_url",
+                                  "v": "https://github.com/YahyaElkhayat"
+                                },
+                                {
+                                  "k": "id",
+                                  "v": 149570106.0
+                                },
+                                {
+                                  "k": "login",
+                                  "v": "YahyaElkhayat"
+                                },
+                                {
+                                  "k": "node_id",
+                                  "v": "U_kgDOCOpCOg"
+                                },
+                                {
+                                  "k": "organizations_url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat/orgs"
+                                },
+                                {
+                                  "k": "received_events_url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat/received_events"
+                                },
+                                {
+                                  "k": "repos_url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat/repos"
+                                },
+                                {
+                                  "k": "site_admin",
+                                  "v": false
+                                },
+                                {
+                                  "k": "starred_url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat/starred{/owner}{/repo}"
+                                },
+                                {
+                                  "k": "subscriptions_url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat/subscriptions"
+                                },
+                                {
+                                  "k": "type",
+                                  "v": "User"
+                                },
+                                {
+                                  "k": "url",
+                                  "v": "https://api.github.com/users/YahyaElkhayat"
+                                },
+                                {
+                                  "k": "user_view_type",
+                                  "v": "public"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "k": "private",
+                            "v": false
+                          },
+                          {
+                            "k": "pulls_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/pulls{/number}"
+                          },
+                          {
+                            "k": "releases_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/releases{/id}"
+                          },
+                          {
+                            "k": "stargazers_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/stargazers"
+                          },
+                          {
+                            "k": "statuses_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/statuses/{sha}"
+                          },
+                          {
+                            "k": "subscribers_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/subscribers"
+                          },
+                          {
+                            "k": "subscription_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/subscription"
+                          },
+                          {
+                            "k": "tags_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/tags"
+                          },
+                          {
+                            "k": "teams_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/teams"
+                          },
+                          {
+                            "k": "trees_url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/git/trees{/sha}"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "rerun_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/actions/runs/15367604820/rerun"
+                    },
+                    {
+                      "k": "run_attempt",
+                      "v": 1.0
+                    },
+                    {
+                      "k": "run_number",
+                      "v": 4.0
+                    },
+                    {
+                      "k": "run_started_at",
+                      "v": "2025-05-31T21:15:21Z"
+                    },
+                    {
+                      "k": "status",
+                      "v": "completed"
+                    },
+                    {
+                      "k": "triggering_actor",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/149570106?v=4"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/YahyaElkhayat"
+                          },
+                          {
+                            "k": "id",
+                            "v": 149570106.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "YahyaElkhayat"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "U_kgDOCOpCOg"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/YahyaElkhayat/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/YahyaElkhayat"
+                          },
+                          {
+                            "k": "user_view_type",
+                            "v": "public"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2025-05-31T21:16:03Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/actions/runs/15367604820"
+                    },
+                    {
+                      "k": "workflow_id",
+                      "v": 165490670.0
+                    },
+                    {
+                      "k": "workflow_url",
+                      "v": "https://api.github.com/repos/YahyaElkhayat/Inventory-service/actions/workflows/165490670"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "workflow_ref",
+          "v": "YahyaElkhayat/Inventory-service/.github/workflows/inventory-service-cd.yml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "4560762c3dad390cbd616a5d4ebde21ebdb68e6f"
+        },
+        {
+          "k": "repository_id",
+          "v": "949942865"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "YahyaElkhayat"
+        }
+      ]
+    },
+    "inputs": {
+      "t": 2
+    },
+    "matrix": null,
+    "needs": {
+      "t": 2
+    },
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    },
+    "vars": {
+      "t": 2
+    }
+  },
+  "billingOwnerId": "U_kgDOCOpCOg"
+}
+[2025-05-31 22:38:51Z INFO JobRunner] Job ID 4d141929-d91b-54be-b381-8ff4f59ae0d9
+[2025-05-31 22:38:51Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\yahya\Downloads\inventory-service\actions-runner\bin\Runner.Worker.dll
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO ConfigurationStore] binPath: C:\Users\yahya\Downloads\inventory-service\actions-runner\bin
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO ConfigurationStore] RootFolder: C:\Users\yahya\Downloads\inventory-service\actions-runner
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known config file 'Runner': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\.runner'
+[2025-05-31 22:38:51Z INFO ConfigurationStore] ConfigFilePath: C:\Users\yahya\Downloads\inventory-service\actions-runner\.runner
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known config file 'MigratedRunner': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\.runner_migrated'
+[2025-05-31 22:38:51Z INFO ConfigurationStore] MigratedConfigFilePath: C:\Users\yahya\Downloads\inventory-service\actions-runner\.runner_migrated
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials'
+[2025-05-31 22:38:51Z INFO ConfigurationStore] CredFilePath: C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials_migrated'
+[2025-05-31 22:38:51Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials_migrated
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known config file 'Service': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\.service'
+[2025-05-31 22:38:51Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\yahya\Downloads\inventory-service\actions-runner\.service
+[2025-05-31 22:38:51Z INFO ConfigurationStore] Read setting file: 321 chars
+[2025-05-31 22:38:51Z INFO JobRunner] Initializing launch client
+[2025-05-31 22:38:51Z INFO JobServerQueue] Initializing results client
+[2025-05-31 22:38:51Z INFO ResultServer] Creating websocket client ...wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock
+[2025-05-31 22:38:51Z INFO ResultServer] Attempting to start websocket client with delay 00:00:00.
+[2025-05-31 22:38:51Z INFO JobServerQueue] Start process web console line queue.
+[2025-05-31 22:38:51Z INFO JobServerQueue] Start process file upload queue.
+[2025-05-31 22:38:51Z INFO JobServerQueue] Start results file upload queue.
+[2025-05-31 22:38:51Z INFO JobServerQueue] Starting results-based upload queue...
+[2025-05-31 22:38:51Z INFO JobServerQueue] Start process timeline update queue.
+[2025-05-31 22:38:51Z INFO ExecutionContext] Initializing Job context
+[2025-05-31 22:38:51Z INFO ExecutionContext] Initialize GitHub context
+[2025-05-31 22:38:51Z INFO ExecutionContext] Initialize Env context
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Diag': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_diag'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Diag': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_diag'
+[2025-05-31 22:38:51Z INFO JobRunner] Starting the job execution context.
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:51Z INFO JobRunner] Validating directory permissions for: 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Tools': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_tool'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Temp': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp'
+[2025-05-31 22:38:51Z INFO JobRunner] Getting job extension.
+[2025-05-31 22:38:51Z INFO JobRunner] Initialize job. Getting all job steps.
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Diag': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_diag'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Diag': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_diag'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known config file 'SetupInfo': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\.setup_info'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:51Z INFO PipelineDirectoryManager] Loading tracking config if exists: C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_PipelineMapping\YahyaElkhayat/Inventory-service\PipelineFolder.json
+[2025-05-31 22:38:51Z INFO PipelineDirectoryManager] Updating job run properties.
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:51Z INFO JobExtension] Downloading actions
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:51Z INFO HostContext] Well known directory 'Actions': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_actions'
+[2025-05-31 22:38:51Z INFO Worker] Listening for cancel message from the channel.
+[2025-05-31 22:38:51Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2025-05-31 22:38:51Z INFO ResultServer] Successfully started websocket client.
+[2025-05-31 22:38:51Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'afe552eb-af6f-46df-8cd0-19611275a597', success rate: 1/1.
+[2025-05-31 22:38:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:52Z INFO HostContext] Well known directory 'Actions': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_actions'
+[2025-05-31 22:38:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:52Z INFO HostContext] Well known directory 'Actions': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_actions'
+[2025-05-31 22:38:52Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/checkout/zipball/11bd71901bbe5b1630ceea73d27597364c9af683' into C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_actions\_temp_eead5a82-3e3e-4165-8118-387444b98285\44964d4f-16f5-41cc-a5f0-b6cd87a7f49d.zip.
+[2025-05-31 22:38:52Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2025-05-31 22:38:52Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'afe552eb-af6f-46df-8cd0-19611275a597', success rate: 1/1.
+[2025-05-31 22:38:53Z INFO ActionManager] Request URL: https://api.github.com/repos/actions/checkout/zipball/11bd71901bbe5b1630ceea73d27597364c9af683 X-GitHub-Request-Id: E011:E8CB5:183B93:266F23:683B84EF Http Status: OK
+[2025-05-31 22:38:53Z INFO ActionManager] Finished getting action repository.
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Actions': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_actions'
+[2025-05-31 22:38:53Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "output-definition",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "run-step",
+  "uses-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "boolean-steps-context",
+  "step-env",
+  "step-if",
+  "step-with"
+]
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Actions': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_actions'
+[2025-05-31 22:38:53Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-05-31 22:38:53Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Actions': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_actions'
+[2025-05-31 22:38:53Z INFO ActionManager] Load action that reference repository from 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_actions\actions\checkout\v4'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Actions': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_actions'
+[2025-05-31 22:38:53Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-05-31 22:38:53Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-05-31 22:38:53Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-05-31 22:38:53Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-05-31 22:38:53Z INFO JobExtension] Adding .
+[2025-05-31 22:38:53Z INFO JobExtension] Adding .
+[2025-05-31 22:38:53Z INFO JobExtension] Adding .
+[2025-05-31 22:38:53Z INFO JobExtension] Adding .
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Diag': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_diag'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Diag': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_diag'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Diag': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_diag'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Diag': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_diag'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Diag': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_diag'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:53Z INFO HostContext] Well known directory 'Diag': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_diag'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Diag': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_diag'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Diag': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_diag'
+[2025-05-31 22:38:54Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'afe552eb-af6f-46df-8cd0-19611275a597', success rate: 1/1.
+[2025-05-31 22:38:54Z INFO JobExtension] Total accessible running process: 287.
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:54Z INFO JobExtension] Start checking service connectivity in background.
+[2025-05-31 22:38:54Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "setup_job",
+  "type": "runner",
+  "stage": "Pre",
+  "stepId": "afe552eb-af6f-46df-8cd0-19611275a597",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 3,
+  "startTime": "2025-05-31T22:38:51.5313721Z",
+  "finishTime": "2025-05-31T22:38:54.0477125Z"
+}.
+[2025-05-31 22:38:54Z INFO JobRunner] Total job steps: 4.
+[2025-05-31 22:38:54Z INFO JobRunner] Run all job steps.
+[2025-05-31 22:38:54Z INFO StepsRunner] Processing step: DisplayName='Checkout Repository (Optional)'
+[2025-05-31 22:38:54Z INFO StepsRunner] Evaluating: success()
+[2025-05-31 22:38:54Z INFO StepsRunner] Result: true
+[2025-05-31 22:38:54Z INFO StepsRunner] Starting the step.
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:54Z INFO StepsRunner] Which2: 'chcp'
+[2025-05-31 22:38:54Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper] Starting process:
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper] Process started with process id 15168, waiting for process exit.
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper] Finished process 15168 with exit code 0, and elapsed time 00:00:00.0754968.
+[2025-05-31 22:38:54Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Actions': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_actions'
+[2025-05-31 22:38:54Z INFO ActionManager] Load action that reference repository from 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_actions\actions\checkout\v4'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Actions': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_actions'
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-05-31 22:38:54Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-05-31 22:38:54Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-05-31 22:38:54Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-05-31 22:38:54Z INFO ExecutionContext] Reserve record order 6 to 10 for post job actions.
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Diag': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_diag'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Diag': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_diag'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Temp': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp'
+[2025-05-31 22:38:54Z INFO ExecutionContext] Write event payload to C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Temp': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp'
+[2025-05-31 22:38:54Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateStepSummaryCommand, Runner.Worker
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateFileCommand, Runner.Worker
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputFileCommand, Runner.Worker
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "YahyaElkhayat/Inventory-service"
+}
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'ssh-user': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 51,
+  "col": 14,
+  "lit": "git"
+}
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 54,
+  "col": 14,
+  "lit": "true"
+}
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 59,
+  "col": 14,
+  "lit": "true"
+}
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'filter': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": ""
+}
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 69,
+  "col": 14,
+  "lit": ""
+}
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "true"
+}
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 76,
+  "col": 14,
+  "lit": "1"
+}
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 79,
+  "col": 14,
+  "lit": "false"
+}
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'show-progress': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "true"
+}
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 85,
+  "col": 14,
+  "lit": "false"
+}
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 94,
+  "col": 14,
+  "lit": "false"
+}
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 97,
+  "col": 14,
+  "lit": "true"
+}
+[2025-05-31 22:38:54Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2025-05-31 22:38:54Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.NoticeCommandExtension, Runner.Worker
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2025-05-31 22:38:54Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2025-05-31 22:38:54Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-05-31 22:38:54Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-05-31 22:38:54Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-05-31 22:38:54Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-05-31 22:38:54Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-05-31 22:38:54Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-05-31 22:38:54Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-05-31 22:38:54Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-05-31 22:38:54Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-05-31 22:38:54Z INFO ActionCommandManager] Register action command extension for command error
+[2025-05-31 22:38:54Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-05-31 22:38:54Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-05-31 22:38:54Z INFO ActionCommandManager] Register action command extension for command group
+[2025-05-31 22:38:54Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-05-31 22:38:54Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:38:54Z INFO HostContext] Well known directory 'Externals': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\externals'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper] Starting process:
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\yahya\Downloads\inventory-service\actions-runner\externals\node20\bin\node.exe'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_actions\actions\checkout\v4\dist/index.js"'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\Inventory-service\Inventory-service'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-05-31 22:38:54Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-05-31 22:38:54Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-05-31 22:38:54Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\yahya\Downloads\inventory-service\actions-runner\_diag\blocks\ed8c9a45-cd93-41eb-b63f-639285254de5_afe552eb-af6f-46df-8cd0-19611275a597.1
+[2025-05-31 22:38:54Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-05-31 22:38:54Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:38:55Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-05-31 22:38:55Z INFO ProcessInvokerWrapper] Process started with process id 20068, waiting for process exit.
+[2025-05-31 22:38:56Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:38:56Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:38:56Z INFO AddMaskCommandExtension] Add new secret mask with length of 76
+[2025-05-31 22:38:56Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:38:57Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:38:57Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:38:57Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:38:58Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:38:58Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:39:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:39:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:39:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:39:09Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:39:09Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:39:09Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:39:09Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:39:14Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:39:14Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:39:14Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:39:24Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:39:24Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:39:24Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:39:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:39:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:39:34Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:39:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:39:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:39:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:39:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:39:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:39:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:39:54Z INFO JobServerQueue] Stop aggressive process web console line queue.
+[2025-05-31 22:40:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:40:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:40:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:40:14Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:40:14Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:40:14Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:40:24Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:40:24Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:40:24Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:40:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:40:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:40:34Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:40:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:40:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:40:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:40:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:40:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:40:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:41:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:41:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:41:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:41:14Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:41:14Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:41:14Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:41:24Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:41:24Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:41:24Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:41:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:41:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:41:34Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:41:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:41:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:41:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:41:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:41:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:41:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:42:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:42:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:42:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:42:14Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:42:14Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:42:14Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:42:24Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:42:24Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:42:24Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:42:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:42:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:42:34Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:42:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:42:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:42:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:42:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:42:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:42:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:43:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:43:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:43:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:43:14Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:43:14Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:43:14Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:43:24Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:43:24Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:43:24Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:43:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:43:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:43:34Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:43:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:43:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:43:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:43:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:43:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:43:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:44:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:44:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:44:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:44:14Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:44:14Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:44:14Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:44:24Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:44:24Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:44:24Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:44:25Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:44:26Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:44:27Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:44:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:44:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:44:34Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:44:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:44:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:44:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:44:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:44:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:44:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:45:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:45:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:45:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:45:14Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:45:14Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:45:14Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:45:24Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:45:24Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:45:24Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:45:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:45:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:45:34Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:45:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:45:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:45:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:45:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:45:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:45:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:46:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:46:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:46:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:46:14Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:46:14Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:46:14Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:46:24Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:46:24Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:46:24Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:46:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:46:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:46:34Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:46:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:46:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:46:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:46:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:46:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:46:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:47:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:47:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:47:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:47:14Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:47:14Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:47:14Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:47:24Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:47:24Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:47:24Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:47:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:47:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:47:34Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:47:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:47:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:47:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:47:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:47:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:47:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:48:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:48:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:48:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:48:14Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:48:14Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:48:14Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:48:24Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:48:24Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:48:24Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:48:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:48:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:48:34Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:48:44Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:48:44Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:48:44Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:48:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:48:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:48:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:48:59Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:49:00Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:49:02Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:49:03Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:49:04Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper] Finished process 20068 with exit code 0, and elapsed time 00:10:10.0272496.
+[2025-05-31 22:49:04Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp\_runner_file_commands\step_summary_d6d659f7-a07a-4d97-9f6b-600ccbca4feb) is empty; skipping attachment upload
+[2025-05-31 22:49:04Z INFO StepsRunner] Step result: 
+[2025-05-31 22:49:04Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v4",
+  "type": "node20",
+  "stage": "Main",
+  "stepId": "319f94e9-99b6-4a7b-985c-8419bf1194ff",
+  "stepContextName": "__actions_checkout",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 611,
+  "startTime": "2025-05-31T22:38:54.1065006Z",
+  "finishTime": "2025-05-31T22:49:04.4960099Z"
+}.
+[2025-05-31 22:49:04Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-05-31 22:49:04Z INFO StepsRunner] Current state: job state = ''
+[2025-05-31 22:49:04Z INFO StepsRunner] Processing step: DisplayName='Pull Docker Image from Docker Hub'
+[2025-05-31 22:49:04Z INFO StepsRunner] Evaluating: success()
+[2025-05-31 22:49:04Z INFO StepsRunner] Result: true
+[2025-05-31 22:49:04Z INFO StepsRunner] Starting the step.
+[2025-05-31 22:49:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:49:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:49:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:49:04Z INFO StepsRunner] Which2: 'chcp'
+[2025-05-31 22:49:04Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper] Starting process:
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-05-31 22:49:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:49:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:49:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper] Process started with process id 5796, waiting for process exit.
+[2025-05-31 22:49:04Z INFO JobServerQueue] Try to append 1 batches web console lines for record '319f94e9-99b6-4a7b-985c-8419bf1194ff', success rate: 1/1.
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper] Finished process 5796 with exit code 0, and elapsed time 00:00:00.1305625.
+[2025-05-31 22:49:04Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-05-31 22:49:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:49:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:49:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:49:04Z INFO HostContext] Well known directory 'Temp': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp'
+[2025-05-31 22:49:04Z INFO ExecutionContext] Write event payload to C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-05-31 22:49:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:49:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:49:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:49:04Z INFO HostContext] Well known directory 'Temp': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp'
+[2025-05-31 22:49:04Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-05-31 22:49:04Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-05-31 22:49:04Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\yahya\Downloads\inventory-service\actions-runner\_diag\blocks\ed8c9a45-cd93-41eb-b63f-639285254de5_319f94e9-99b6-4a7b-985c-8419bf1194ff.1
+[2025-05-31 22:49:04Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-05-31 22:49:04Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-05-31 22:49:04Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-05-31 22:49:04Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-05-31 22:49:04Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-05-31 22:49:04Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-05-31 22:49:04Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-05-31 22:49:04Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-05-31 22:49:04Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-05-31 22:49:04Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-05-31 22:49:04Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-05-31 22:49:04Z INFO ActionCommandManager] Register action command extension for command error
+[2025-05-31 22:49:04Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-05-31 22:49:04Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-05-31 22:49:04Z INFO ActionCommandManager] Register action command extension for command group
+[2025-05-31 22:49:04Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-05-31 22:49:04Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-05-31 22:49:04Z INFO ScriptHandler] Which2: 'pwsh'
+[2025-05-31 22:49:04Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2025-05-31 22:49:04Z INFO ScriptHandler] Defaulting to powershell
+[2025-05-31 22:49:04Z INFO ScriptHandler] Which2: 'powershell'
+[2025-05-31 22:49:04Z INFO ScriptHandler] Location: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2025-05-31 22:49:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:49:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:49:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:49:04Z INFO HostContext] Well known directory 'Temp': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp'
+[2025-05-31 22:49:04Z INFO ScriptHandler] Which2: 'pwsh'
+[2025-05-31 22:49:04Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2025-05-31 22:49:04Z INFO ScriptHandler] Defaulting to powershell
+[2025-05-31 22:49:04Z INFO ScriptHandler] Which2: 'powershell'
+[2025-05-31 22:49:04Z INFO ScriptHandler] Location: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper] Starting process:
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp\07ce508f-c19e-4d59-903e-b2ee5d3c67dc.ps1'"'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\Inventory-service\Inventory-service'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-05-31 22:49:04Z INFO ProcessInvokerWrapper] Process started with process id 11912, waiting for process exit.
+[2025-05-31 22:49:05Z INFO JobServerQueue] Try to append 1 batches web console lines for record '764e13d0-f267-41f9-a84a-0985fa16ead0', success rate: 1/1.
+[2025-05-31 22:49:05Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-05-31 22:49:14Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:49:14Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:49:14Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:49:24Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:49:24Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:49:24Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:49:34Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:49:34Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:49:34Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'

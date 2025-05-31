@@ -3,8 +3,6 @@ const bodyParser = require('body-parser');
 const yes=200;
 const app = express();
 const PORT = 3000;
-//hello guys how are youuuu
-//hyhyhy
 const yhy= jsuahiu
 const stage= remuneration
 const yhy2= jsuahiu
