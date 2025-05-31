@@ -3351,3 +3351,816 @@
 [2025-05-31 22:16:55Z INFO JobServerQueue] Try to append 1 batches web console lines for record '313f6acf-734d-419c-b04a-3d16a1a5be12', success rate: 1/1.
 [2025-05-31 22:16:56Z INFO JobServerQueue] Try to append 1 batches web console lines for record '313f6acf-734d-419c-b04a-3d16a1a5be12', success rate: 1/1.
 [2025-05-31 22:16:56Z INFO JobServerQueue] Try to append 1 batches web console lines for record '313f6acf-734d-419c-b04a-3d16a1a5be12', success rate: 1/1.
+[2025-05-31 22:17:02Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:17:02Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:17:02Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:17:05Z INFO JobServerQueue] Try to append 1 batches web console lines for record '313f6acf-734d-419c-b04a-3d16a1a5be12', success rate: 1/1.
+[2025-05-31 22:17:12Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:17:12Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:17:12Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:17:14Z INFO JobServerQueue] Try to append 1 batches web console lines for record '313f6acf-734d-419c-b04a-3d16a1a5be12', success rate: 1/1.
+[2025-05-31 22:17:14Z INFO JobServerQueue] Try to append 1 batches web console lines for record '313f6acf-734d-419c-b04a-3d16a1a5be12', success rate: 1/1.
+[2025-05-31 22:17:16Z INFO JobServerQueue] Try to append 1 batches web console lines for record '313f6acf-734d-419c-b04a-3d16a1a5be12', success rate: 1/1.
+[2025-05-31 22:17:16Z INFO JobServerQueue] Try to append 1 batches web console lines for record '313f6acf-734d-419c-b04a-3d16a1a5be12', success rate: 1/1.
+[2025-05-31 22:17:18Z INFO JobServerQueue] Try to append 1 batches web console lines for record '313f6acf-734d-419c-b04a-3d16a1a5be12', success rate: 1/1.
+[2025-05-31 22:17:18Z INFO JobServerQueue] Try to append 1 batches web console lines for record '313f6acf-734d-419c-b04a-3d16a1a5be12', success rate: 1/1.
+[2025-05-31 22:17:18Z INFO JobServerQueue] Try to append 1 batches web console lines for record '313f6acf-734d-419c-b04a-3d16a1a5be12', success rate: 1/1.
+[2025-05-31 22:17:18Z INFO JobServerQueue] Try to append 1 batches web console lines for record '313f6acf-734d-419c-b04a-3d16a1a5be12', success rate: 1/1.
+[2025-05-31 22:17:18Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-05-31 22:17:18Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-05-31 22:17:18Z INFO ProcessInvokerWrapper] Finished process 8340 with exit code 0, and elapsed time 00:00:25.8037508.
+[2025-05-31 22:17:18Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp\_runner_file_commands\step_summary_1d17b968-5791-4d11-b63c-122a33b8e5c0) is empty; skipping attachment upload
+[2025-05-31 22:17:18Z INFO StepsRunner] Step result: 
+[2025-05-31 22:17:18Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v4",
+  "type": "node20",
+  "stage": "Main",
+  "stepId": "313f6acf-734d-419c-b04a-3d16a1a5be12",
+  "stepContextName": "__actions_checkout",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 27,
+  "startTime": "2025-05-31T22:16:52.8827143Z",
+  "finishTime": "2025-05-31T22:17:18.9786886Z"
+}.
+[2025-05-31 22:17:18Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-05-31 22:17:18Z INFO StepsRunner] Current state: job state = ''
+[2025-05-31 22:17:18Z INFO StepsRunner] Processing step: DisplayName='Pull Docker Image from Docker Hub'
+[2025-05-31 22:17:18Z INFO StepsRunner] Evaluating: success()
+[2025-05-31 22:17:18Z INFO StepsRunner] Result: true
+[2025-05-31 22:17:18Z INFO StepsRunner] Starting the step.
+[2025-05-31 22:17:18Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:17:18Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:17:18Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:17:18Z INFO StepsRunner] Which2: 'chcp'
+[2025-05-31 22:17:18Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2025-05-31 22:17:18Z INFO ProcessInvokerWrapper] Starting process:
+[2025-05-31 22:17:18Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2025-05-31 22:17:18Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-05-31 22:17:18Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:17:18Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-05-31 22:17:18Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-05-31 22:17:18Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-05-31 22:17:18Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-05-31 22:17:18Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-05-31 22:17:18Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-05-31 22:17:18Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-05-31 22:17:19Z INFO ProcessInvokerWrapper] Process started with process id 10444, waiting for process exit.
+[2025-05-31 22:17:19Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-05-31 22:17:19Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-05-31 22:17:19Z INFO ProcessInvokerWrapper] Finished process 10444 with exit code 0, and elapsed time 00:00:00.0504575.
+[2025-05-31 22:17:19Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-05-31 22:17:19Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:17:19Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:17:19Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:17:19Z INFO HostContext] Well known directory 'Temp': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp'
+[2025-05-31 22:17:19Z INFO ExecutionContext] Write event payload to C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-05-31 22:17:19Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:17:19Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:17:19Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:17:19Z INFO HostContext] Well known directory 'Temp': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp'
+[2025-05-31 22:17:19Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-05-31 22:17:19Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-05-31 22:17:19Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-05-31 22:17:19Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-05-31 22:17:19Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-05-31 22:17:19Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-05-31 22:17:19Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-05-31 22:17:19Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-05-31 22:17:19Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-05-31 22:17:19Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-05-31 22:17:19Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-05-31 22:17:19Z INFO ActionCommandManager] Register action command extension for command error
+[2025-05-31 22:17:19Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-05-31 22:17:19Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-05-31 22:17:19Z INFO ActionCommandManager] Register action command extension for command group
+[2025-05-31 22:17:19Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-05-31 22:17:19Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-05-31 22:17:19Z INFO ScriptHandler] Which2: 'pwsh'
+[2025-05-31 22:17:19Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2025-05-31 22:17:19Z INFO ScriptHandler] Defaulting to powershell
+[2025-05-31 22:17:19Z INFO ScriptHandler] Which2: 'powershell'
+[2025-05-31 22:17:19Z INFO ScriptHandler] Location: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2025-05-31 22:17:19Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:17:19Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:17:19Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:17:19Z INFO HostContext] Well known directory 'Temp': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp'
+[2025-05-31 22:17:19Z INFO ScriptHandler] Which2: 'pwsh'
+[2025-05-31 22:17:19Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2025-05-31 22:17:19Z INFO ScriptHandler] Defaulting to powershell
+[2025-05-31 22:17:19Z INFO ScriptHandler] Which2: 'powershell'
+[2025-05-31 22:17:19Z INFO ScriptHandler] Location: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2025-05-31 22:17:19Z INFO ProcessInvokerWrapper] Starting process:
+[2025-05-31 22:17:19Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2025-05-31 22:17:19Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp\26e13ce7-7583-4e63-aaba-844330ca99ba.ps1'"'
+[2025-05-31 22:17:19Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\Inventory-service\Inventory-service'
+[2025-05-31 22:17:19Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-05-31 22:17:19Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-05-31 22:17:19Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-05-31 22:17:19Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-05-31 22:17:19Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-05-31 22:17:19Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-05-31 22:17:19Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-05-31 22:17:19Z INFO ProcessInvokerWrapper] Process started with process id 19596, waiting for process exit.
+[2025-05-31 22:17:19Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e8d0f8e-23c4-4bf9-848b-52fdef04381a', success rate: 1/1.
+[2025-05-31 22:17:19Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-05-31 22:17:19Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\yahya\Downloads\inventory-service\actions-runner\_diag\blocks\d83f4dfa-4840-45f5-b88c-17c77549b11d_313f6acf-734d-419c-b04a-3d16a1a5be12.1
+[2025-05-31 22:17:19Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-05-31 22:17:19Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-05-31 22:17:21Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e8d0f8e-23c4-4bf9-848b-52fdef04381a', success rate: 1/1.
+[2025-05-31 22:17:22Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:17:22Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:17:22Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:17:23Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e8d0f8e-23c4-4bf9-848b-52fdef04381a', success rate: 1/1.
+[2025-05-31 22:17:23Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e8d0f8e-23c4-4bf9-848b-52fdef04381a', success rate: 1/1.
+[2025-05-31 22:17:24Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e8d0f8e-23c4-4bf9-848b-52fdef04381a', success rate: 1/1.
+[2025-05-31 22:17:32Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:17:32Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:17:32Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:17:35Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e8d0f8e-23c4-4bf9-848b-52fdef04381a', success rate: 1/1.
+[2025-05-31 22:17:39Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e8d0f8e-23c4-4bf9-848b-52fdef04381a', success rate: 1/1.
+[2025-05-31 22:17:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:17:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:17:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:17:45Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e8d0f8e-23c4-4bf9-848b-52fdef04381a', success rate: 1/1.
+[2025-05-31 22:17:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:17:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:17:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:17:53Z INFO JobServerQueue] Stop aggressive process web console line queue.
+[2025-05-31 22:18:02Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:18:02Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:18:02Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:18:12Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:18:12Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:18:12Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:18:22Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:18:22Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:18:22Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:18:32Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:18:32Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:18:32Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:18:42Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:18:42Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:18:42Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:18:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:18:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:18:52Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:19:02Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:19:02Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:19:02Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:19:12Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:19:12Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:19:12Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:19:22Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:19:22Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:19:22Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:19:33Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:19:33Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:19:33Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:19:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:19:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:19:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:19:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:19:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:19:53Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:19:54Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e8d0f8e-23c4-4bf9-848b-52fdef04381a', success rate: 1/1.
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper] Finished process 19596 with exit code 1, and elapsed time 00:02:35.6132667.
+[2025-05-31 22:19:54Z INFO CreateStepSummaryCommand] Step Summary file (C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp\_runner_file_commands\step_summary_b0a4bc28-7cf7-4c92-afe9-5f52635e3752) is empty; skipping attachment upload
+[2025-05-31 22:19:54Z INFO StepsRunner] Step result: Failed
+[2025-05-31 22:19:54Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "powershell",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "6e8d0f8e-23c4-4bf9-848b-52fdef04381a",
+  "stepContextName": "__run",
+  "result": "failed",
+  "errorMessages": [
+    "Process completed with exit code 1."
+  ],
+  "executionTimeInSeconds": 156,
+  "startTime": "2025-05-31T22:17:18.9812435Z",
+  "finishTime": "2025-05-31T22:19:54.7317735Z"
+}.
+[2025-05-31 22:19:54Z INFO StepsRunner] Update job result with current step result 'Failed'.
+[2025-05-31 22:19:54Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-05-31 22:19:54Z INFO StepsRunner] Processing step: DisplayName='Stop and Remove Existing Docker Container (Windows PowerShell)'
+[2025-05-31 22:19:54Z INFO StepsRunner] Evaluating: success()
+[2025-05-31 22:19:54Z INFO StepsRunner] Result: false
+[2025-05-31 22:19:54Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2025-05-31 22:19:54Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2025-05-31 22:19:54Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-05-31 22:19:54Z INFO StepsRunner] Processing step: DisplayName='Run Docker Container'
+[2025-05-31 22:19:54Z INFO StepsRunner] Evaluating: success()
+[2025-05-31 22:19:54Z INFO StepsRunner] Result: false
+[2025-05-31 22:19:54Z INFO StepsRunner] Skipping step due to condition evaluation.
+[2025-05-31 22:19:54Z INFO StepsRunner] No need for updating job result with current step result 'Skipped'.
+[2025-05-31 22:19:54Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-05-31 22:19:54Z INFO StepsRunner] Processing step: DisplayName='Post Checkout Repository (Optional)'
+[2025-05-31 22:19:54Z INFO StepsRunner] Evaluating: always()
+[2025-05-31 22:19:54Z INFO StepsRunner] Result: true
+[2025-05-31 22:19:54Z INFO StepsRunner] Starting the step.
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:19:54Z INFO StepsRunner] Which2: 'chcp'
+[2025-05-31 22:19:54Z INFO StepsRunner] Location: 'C:\WINDOWS\system32\chcp.COM'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper] Starting process:
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   File name: 'C:\WINDOWS\system32\chcp.COM'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper] Process started with process id 20020, waiting for process exit.
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper] Finished process 20020 with exit code 0, and elapsed time 00:00:00.0915190.
+[2025-05-31 22:19:54Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Actions': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_actions'
+[2025-05-31 22:19:54Z INFO ActionManager] Load action that reference repository from 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_actions\actions\checkout\v4'
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Actions': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_actions'
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "ssh-user"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 14,
+          "lit": "git"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 52,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 54,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 57,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 3,
+          "lit": "filter"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 69,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 76,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 77,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 79,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 80,
+          "col": 3,
+          "lit": "show-progress"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 94,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 95,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 97,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 98,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node20",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-05-31 22:19:54Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-05-31 22:19:54Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-05-31 22:19:54Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Temp': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp'
+[2025-05-31 22:19:54Z INFO ExecutionContext] Write event payload to C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Temp': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_temp'
+[2025-05-31 22:19:54Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "YahyaElkhayat/Inventory-service"
+}
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'ssh-user': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 51,
+  "col": 14,
+  "lit": "git"
+}
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 54,
+  "col": 14,
+  "lit": "true"
+}
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 59,
+  "col": 14,
+  "lit": "true"
+}
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'filter': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": ""
+}
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 69,
+  "col": 14,
+  "lit": ""
+}
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "true"
+}
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 76,
+  "col": 14,
+  "lit": "1"
+}
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 79,
+  "col": 14,
+  "lit": "false"
+}
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'show-progress': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "true"
+}
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 85,
+  "col": 14,
+  "lit": "false"
+}
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 94,
+  "col": 14,
+  "lit": "false"
+}
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 97,
+  "col": 14,
+  "lit": "true"
+}
+[2025-05-31 22:19:54Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2025-05-31 22:19:54Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-05-31 22:19:54Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-05-31 22:19:54Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-05-31 22:19:54Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-05-31 22:19:54Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-05-31 22:19:54Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-05-31 22:19:54Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-05-31 22:19:54Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-05-31 22:19:54Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-05-31 22:19:54Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-05-31 22:19:54Z INFO ActionCommandManager] Register action command extension for command error
+[2025-05-31 22:19:54Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-05-31 22:19:54Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-05-31 22:19:54Z INFO ActionCommandManager] Register action command extension for command group
+[2025-05-31 22:19:54Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-05-31 22:19:54Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:19:54Z INFO HostContext] Well known directory 'Externals': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\externals'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper] Starting process:
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\yahya\Downloads\inventory-service\actions-runner\externals\node20\bin\node.exe'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\_actions\actions\checkout\v4\dist/index.js"'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work\Inventory-service\Inventory-service'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-05-31 22:19:54Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-05-31 22:19:55Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6e8d0f8e-23c4-4bf9-848b-52fdef04381a', success rate: 1/1.
+[2025-05-31 22:19:55Z INFO JobServerQueue] Try to append 1 batches web console lines for record '08bafeb1-30ef-4a28-be21-87daef428c28', success rate: 1/1.
+[2025-05-31 22:19:55Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-05-31 22:19:55Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, C:\Users\yahya\Downloads\inventory-service\actions-runner\_diag\blocks\d83f4dfa-4840-45f5-b88c-17c77549b11d_6e8d0f8e-23c4-4bf9-848b-52fdef04381a.1
+[2025-05-31 22:19:55Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-05-31 22:19:56Z INFO ProcessInvokerWrapper] Process started with process id 21172, waiting for process exit.
+[2025-05-31 22:19:56Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-05-31 22:19:57Z INFO AddMaskCommandExtension] Add new secret mask with length of 32
+[2025-05-31 22:19:57Z INFO JobServerQueue] Try to append 1 batches web console lines for record '08bafeb1-30ef-4a28-be21-87daef428c28', success rate: 1/1.
+[2025-05-31 22:19:57Z INFO JobServerQueue] Try to append 1 batches web console lines for record '08bafeb1-30ef-4a28-be21-87daef428c28', success rate: 1/1.
+[2025-05-31 22:20:03Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:20:03Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:20:03Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:20:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:20:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:20:13Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:20:23Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:20:23Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:20:23Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:20:33Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:20:33Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:20:33Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:20:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:20:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:20:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:20:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:20:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:20:53Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:21:03Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:21:03Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:21:03Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:21:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:21:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:21:13Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:21:23Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:21:23Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:21:23Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:21:33Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:21:33Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:21:33Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:21:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:21:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:21:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:21:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:21:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:21:53Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:22:03Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:22:03Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:22:03Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:22:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:22:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:22:13Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:22:23Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:22:23Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:22:23Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:22:33Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:22:33Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:22:33Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:22:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:22:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:22:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:22:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:22:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:22:53Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:23:03Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:23:03Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:23:03Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:23:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:23:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:23:13Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:23:23Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:23:23Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:23:23Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:23:33Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:23:33Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:23:33Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:23:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:23:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:23:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:23:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:23:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:23:53Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:24:03Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:24:03Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:24:03Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:24:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:24:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:24:13Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:24:23Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:24:23Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:24:23Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:24:33Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:24:33Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:24:33Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:24:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:24:43Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:24:43Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:24:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:24:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:24:53Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:25:03Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:25:03Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:25:03Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'
+[2025-05-31 22:25:13Z INFO HostContext] Well known directory 'Bin': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\bin'
+[2025-05-31 22:25:13Z INFO HostContext] Well known directory 'Root': 'C:\Users\yahya\Downloads\inventory-service\actions-runner'
+[2025-05-31 22:25:13Z INFO HostContext] Well known directory 'Work': 'C:\Users\yahya\Downloads\inventory-service\actions-runner\_work'

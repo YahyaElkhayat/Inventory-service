@@ -49,4 +49,56 @@
 2025-05-31T22:16:56.1948526Z ##[endgroup]
 2025-05-31T22:16:56.1974824Z ##[group]Setting up auth
 2025-05-31T22:16:56.1976504Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp core\.sshCommand
-2025-05-31T22:16:56.3617445Z [command]"C:\Program Files\Git\cmd
+2025-05-31T22:16:56.3617445Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2025-05-31T22:17:05.6782921Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-05-31T22:17:05.8066081Z [command]"C:\Program Files\Git\cmd\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2025-05-31T22:17:14.2644547Z [command]"C:\Program Files\Git\cmd\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2025-05-31T22:17:14.5937599Z ##[endgroup]
+2025-05-31T22:17:14.5947563Z ##[group]Fetching the repository
+2025-05-31T22:17:14.5987507Z [command]"C:\Program Files\Git\cmd\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +eb7bf40f2de38d902566754e742f5baa29aa6e9c:refs/remotes/origin/main
+2025-05-31T22:17:16.3212305Z From https://github.com/YahyaElkhayat/Inventory-service
+2025-05-31T22:17:16.3213556Z  * [new ref]         eb7bf40f2de38d902566754e742f5baa29aa6e9c -> origin/main
+2025-05-31T22:17:16.3786022Z ##[endgroup]
+2025-05-31T22:17:16.3786897Z ##[group]Determining the checkout info
+2025-05-31T22:17:16.3806555Z ##[endgroup]
+2025-05-31T22:17:16.3826477Z [command]"C:\Program Files\Git\cmd\git.exe" sparse-checkout disable
+2025-05-31T22:17:16.6303972Z [command]"C:\Program Files\Git\cmd\git.exe" config --local --unset-all extensions.worktreeConfig
+2025-05-31T22:17:16.7815527Z ##[group]Checking out the ref
+2025-05-31T22:17:16.7845839Z [command]"C:\Program Files\Git\cmd\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+2025-05-31T22:17:17.9479735Z Updating files:  68% (537/785)
+2025-05-31T22:17:17.9626498Z Updating files:  69% (542/785)
+2025-05-31T22:17:17.9790423Z Updating files:  70% (550/785)
+2025-05-31T22:17:17.9898817Z Updating files:  71% (558/785)
+2025-05-31T22:17:18.0028344Z Updating files:  72% (566/785)
+2025-05-31T22:17:18.0282361Z Updating files:  73% (574/785)
+2025-05-31T22:17:18.0539292Z Updating files:  74% (581/785)
+2025-05-31T22:17:18.0698869Z Updating files:  75% (589/785)
+2025-05-31T22:17:18.0890450Z Updating files:  76% (597/785)
+2025-05-31T22:17:18.1036988Z Updating files:  77% (605/785)
+2025-05-31T22:17:18.1195575Z Updating files:  78% (613/785)
+2025-05-31T22:17:18.1383173Z Updating files:  79% (621/785)
+2025-05-31T22:17:18.1493050Z Updating files:  80% (628/785)
+2025-05-31T22:17:18.1618089Z Updating files:  81% (636/785)
+2025-05-31T22:17:18.1745333Z Updating files:  82% (644/785)
+2025-05-31T22:17:18.1862149Z Updating files:  83% (652/785)
+2025-05-31T22:17:18.1970958Z Updating files:  84% (660/785)
+2025-05-31T22:17:18.2078401Z Updating files:  85% (668/785)
+2025-05-31T22:17:18.2187984Z Updating files:  86% (676/785)
+2025-05-31T22:17:18.2392182Z Updating files:  87% (683/785)
+2025-05-31T22:17:18.2539288Z Updating files:  88% (691/785)
+2025-05-31T22:17:18.2718717Z Updating files:  89% (699/785)
+2025-05-31T22:17:18.3044180Z Updating files:  90% (707/785)
+2025-05-31T22:17:18.3375014Z Updating files:  91% (715/785)
+2025-05-31T22:17:18.3568267Z Updating files:  92% (723/785)
+2025-05-31T22:17:18.3731702Z Updating files:  93% (731/785)
+2025-05-31T22:17:18.4014408Z Updating files:  94% (738/785)
+2025-05-31T22:17:18.4155711Z Updating files:  95% (746/785)
+2025-05-31T22:17:18.4317721Z Updating files:  96% (754/785)
+2025-05-31T22:17:18.4515894Z Updating files:  97% (762/785)
+2025-05-31T22:17:18.4694158Z Updating files:  98% (770/785)
+2025-05-31T22:17:18.4943296Z Updating files:  99% (778/785)
+2025-05-31T22:17:18.4951636Z Updating files: 100% (785/785)
+2025-05-31T22:17:18.4957568Z Updating files: 100% (785/785), done.
+2025-05-31T22:17:18.5649201Z branch 'main' set up to track 'origin/main'.
+2025-05-31T22:17:18.5652898Z Reset branch 'main'
+2025-05-31T22:17:18.

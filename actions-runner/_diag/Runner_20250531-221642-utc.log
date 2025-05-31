@@ -173,3 +173,93 @@
 [2025-05-31 22:16:50Z INFO CredentialManager] Creating type OAuth
 [2025-05-31 22:16:50Z INFO CredentialManager] Creating credential type: OAuth
 [2025-05-31 22:16:50Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials_rsaparams
+[2025-05-31 22:17:40Z INFO ConfigurationStore] HasCredentials()
+[2025-05-31 22:17:40Z INFO ConfigurationStore] stored True
+[2025-05-31 22:17:40Z INFO CredentialManager] GetCredentialProvider
+[2025-05-31 22:17:40Z INFO CredentialManager] Creating type OAuth
+[2025-05-31 22:17:40Z INFO CredentialManager] Creating credential type: OAuth
+[2025-05-31 22:17:40Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials_rsaparams
+[2025-05-31 22:17:49Z INFO JobDispatcher] Successfully renew job adc4a320-a0b9-5c5e-9345-c25eec4ec2e2, job is valid till 5/31/2025 10:27:35 PM
+[2025-05-31 22:18:30Z INFO ConfigurationStore] HasCredentials()
+[2025-05-31 22:18:30Z INFO ConfigurationStore] stored True
+[2025-05-31 22:18:30Z INFO CredentialManager] GetCredentialProvider
+[2025-05-31 22:18:30Z INFO CredentialManager] Creating type OAuth
+[2025-05-31 22:18:30Z INFO CredentialManager] Creating credential type: OAuth
+[2025-05-31 22:18:30Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials_rsaparams
+[2025-05-31 22:18:49Z INFO JobDispatcher] Successfully renew job adc4a320-a0b9-5c5e-9345-c25eec4ec2e2, job is valid till 5/31/2025 10:28:35 PM
+[2025-05-31 22:19:21Z INFO ConfigurationStore] HasCredentials()
+[2025-05-31 22:19:21Z INFO ConfigurationStore] stored True
+[2025-05-31 22:19:21Z INFO CredentialManager] GetCredentialProvider
+[2025-05-31 22:19:21Z INFO CredentialManager] Creating type OAuth
+[2025-05-31 22:19:21Z INFO CredentialManager] Creating credential type: OAuth
+[2025-05-31 22:19:21Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials_rsaparams
+[2025-05-31 22:19:49Z INFO JobDispatcher] Successfully renew job adc4a320-a0b9-5c5e-9345-c25eec4ec2e2, job is valid till 5/31/2025 10:29:35 PM
+[2025-05-31 22:20:11Z INFO ConfigurationStore] HasCredentials()
+[2025-05-31 22:20:11Z INFO ConfigurationStore] stored True
+[2025-05-31 22:20:11Z INFO CredentialManager] GetCredentialProvider
+[2025-05-31 22:20:11Z INFO CredentialManager] Creating type OAuth
+[2025-05-31 22:20:11Z INFO CredentialManager] Creating credential type: OAuth
+[2025-05-31 22:20:11Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials_rsaparams
+[2025-05-31 22:20:49Z INFO JobDispatcher] Successfully renew job adc4a320-a0b9-5c5e-9345-c25eec4ec2e2, job is valid till 5/31/2025 10:30:35 PM
+[2025-05-31 22:21:01Z INFO ConfigurationStore] HasCredentials()
+[2025-05-31 22:21:01Z INFO ConfigurationStore] stored True
+[2025-05-31 22:21:01Z INFO CredentialManager] GetCredentialProvider
+[2025-05-31 22:21:01Z INFO CredentialManager] Creating type OAuth
+[2025-05-31 22:21:01Z INFO CredentialManager] Creating credential type: OAuth
+[2025-05-31 22:21:01Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials_rsaparams
+[2025-05-31 22:21:49Z INFO JobDispatcher] Successfully renew job adc4a320-a0b9-5c5e-9345-c25eec4ec2e2, job is valid till 5/31/2025 10:31:35 PM
+[2025-05-31 22:21:52Z INFO ConfigurationStore] HasCredentials()
+[2025-05-31 22:21:52Z INFO ConfigurationStore] stored True
+[2025-05-31 22:21:52Z INFO CredentialManager] GetCredentialProvider
+[2025-05-31 22:21:52Z INFO CredentialManager] Creating type OAuth
+[2025-05-31 22:21:52Z INFO CredentialManager] Creating credential type: OAuth
+[2025-05-31 22:21:52Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials_rsaparams
+[2025-05-31 22:22:42Z INFO ConfigurationStore] HasCredentials()
+[2025-05-31 22:22:42Z INFO ConfigurationStore] stored True
+[2025-05-31 22:22:42Z INFO CredentialManager] GetCredentialProvider
+[2025-05-31 22:22:42Z INFO CredentialManager] Creating type OAuth
+[2025-05-31 22:22:42Z INFO CredentialManager] Creating credential type: OAuth
+[2025-05-31 22:22:42Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials_rsaparams
+[2025-05-31 22:22:49Z INFO JobDispatcher] Successfully renew job adc4a320-a0b9-5c5e-9345-c25eec4ec2e2, job is valid till 5/31/2025 10:32:36 PM
+[2025-05-31 22:23:32Z INFO ConfigurationStore] HasCredentials()
+[2025-05-31 22:23:32Z INFO ConfigurationStore] stored True
+[2025-05-31 22:23:32Z INFO CredentialManager] GetCredentialProvider
+[2025-05-31 22:23:32Z INFO CredentialManager] Creating type OAuth
+[2025-05-31 22:23:32Z INFO CredentialManager] Creating credential type: OAuth
+[2025-05-31 22:23:32Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials_rsaparams
+[2025-05-31 22:23:49Z INFO JobDispatcher] Successfully renew job adc4a320-a0b9-5c5e-9345-c25eec4ec2e2, job is valid till 5/31/2025 10:33:36 PM
+[2025-05-31 22:24:23Z INFO ConfigurationStore] HasCredentials()
+[2025-05-31 22:24:23Z INFO ConfigurationStore] stored True
+[2025-05-31 22:24:23Z INFO CredentialManager] GetCredentialProvider
+[2025-05-31 22:24:23Z INFO CredentialManager] Creating type OAuth
+[2025-05-31 22:24:23Z INFO CredentialManager] Creating credential type: OAuth
+[2025-05-31 22:24:23Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials_rsaparams
+[2025-05-31 22:24:50Z INFO JobDispatcher] Successfully renew job adc4a320-a0b9-5c5e-9345-c25eec4ec2e2, job is valid till 5/31/2025 10:34:36 PM
+[2025-05-31 22:25:13Z INFO ConfigurationStore] HasCredentials()
+[2025-05-31 22:25:13Z INFO ConfigurationStore] stored True
+[2025-05-31 22:25:13Z INFO CredentialManager] GetCredentialProvider
+[2025-05-31 22:25:13Z INFO CredentialManager] Creating type OAuth
+[2025-05-31 22:25:13Z INFO CredentialManager] Creating credential type: OAuth
+[2025-05-31 22:25:13Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials_rsaparams
+[2025-05-31 22:25:17Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-05-31 22:25:17Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-05-31 22:25:17Z INFO ProcessInvokerWrapper] Finished process 3508 with exit code 1073807364, and elapsed time 00:08:28.8104196.
+[2025-05-31 22:25:17Z INFO JobDispatcher] Worker finished for job adc4a320-a0b9-5c5e-9345-c25eec4ec2e2. Code: 1073807364
+[2025-05-31 22:25:17Z INFO JobDispatcher] Return code 1073807364 indicate worker encounter an unhandled exception or app crash, attach worker stdout/stderr to JobRequest result.
+[2025-05-31 22:25:20Z INFO MessageListener] Message '3151750329638931981' received from session 'fb5bd9a5-9d8f-404d-8f7b-06c220b366ee'.
+[2025-05-31 22:25:20Z INFO ConfigurationStore] HasCredentials()
+[2025-05-31 22:25:20Z INFO ConfigurationStore] stored True
+[2025-05-31 22:25:20Z INFO CredentialManager] GetCredentialProvider
+[2025-05-31 22:25:20Z INFO CredentialManager] Creating type OAuth
+[2025-05-31 22:25:20Z INFO CredentialManager] Creating credential type: OAuth
+[2025-05-31 22:25:20Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials_rsaparams
+[2025-05-31 22:25:20Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials_rsaparams
+[2025-05-31 22:25:20Z INFO JobDispatcher] finish job request for job adc4a320-a0b9-5c5e-9345-c25eec4ec2e2 with result: Failed
+[2025-05-31 22:25:20Z INFO Terminal] WRITE LINE: 2025-05-31 22:25:20Z: Job deploy completed with result: Failed
+[2025-05-31 22:25:20Z INFO JobDispatcher] Stop renew job request for job adc4a320-a0b9-5c5e-9345-c25eec4ec2e2.
+[2025-05-31 22:25:20Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\yahya\Downloads\inventory-service\actions-runner\.credentials_rsaparams
+[2025-05-31 22:25:20Z INFO JobDispatcher] job renew has been cancelled, stop renew job adc4a320-a0b9-5c5e-9345-c25eec4ec2e2.
+[2025-05-31 22:25:20Z INFO JobNotification] Entering JobCompleted Notification
+[2025-05-31 22:25:20Z INFO JobNotification] Entering EndMonitor
+[2025-05-31 22:25:20Z INFO MessageListener] Received job status event. JobState: Online
+[2025-05-31 22:25:20Z INFO MessageListener] _getMessagesTokenSource is already disposed.

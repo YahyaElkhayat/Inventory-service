@@ -1,0 +1,16 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Yahya elkhayat
+	email = yahyaelkhayat6@gmail.com
+[http]
+	postBuffer = 524288000
+[core]
+	autocrlf = true
+[init]
+	defaultBranch = main
+[safe]
+	directory = C:\\Users\\yahya\\Downloads\\inventory-service\\actions-runner\\_work\\Inventory-service\\Inventory-service
